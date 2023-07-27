@@ -17,7 +17,6 @@ codeunit 50100 CourseInstallCode// cái này đung dể auto thêm dữ liệu k
         end;
     end;
 
-    // Insert the GOLD, SILVER, BRONZE reward levels
     /// <summary>
     /// InsertDefaultCourse.
     /// </summary>
