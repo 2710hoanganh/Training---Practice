@@ -11,7 +11,7 @@ report 50100 "Course Report"
     {
         dataitem(Course; "Course Infomation Table")
         {
-            RequestFilterFields = Code;
+            RequestFilterFields = Type;
             column(Code; Code)
             {
 

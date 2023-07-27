@@ -70,6 +70,7 @@ page 50101 "Course Page List"
                 var
                     c: Report "Course Report";
                 begin
+
                     c.Run();
                 end;
             }
