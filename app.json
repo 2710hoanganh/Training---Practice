@@ -1,0 +1,33 @@
+{
+  "id": "1733de60-9369-4831-9c45-1b6f625ff24a",
+  "name": "Training - Practice",
+  "publisher": "Default publisher",
+  "version": "1.0.0.8",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "22.0.0.0",
+
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50200
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "11.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
