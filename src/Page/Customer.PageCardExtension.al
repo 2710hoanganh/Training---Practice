@@ -13,7 +13,7 @@ pageextension 50101 "Customer Page Card Ext" extends "Customer Card"
         // Add changes to page actions here
         addlast("F&unctions")
         {
-            action(UpdateCreditLimit)
+            action(UpdateCreditLimit)// mở vào mục action trên page vào function chọn UpdateCreditLimit
             {
                 Caption = 'Update Credit Limit';
                 ApplicationArea = all;
@@ -25,7 +25,7 @@ pageextension 50101 "Customer Page Card Ext" extends "Customer Card"
                     CallUpdateCreditLimit(Rec);
                 end;
             }
-            action("CalculateCreditLimit")
+            action("CalculateCreditLimit")// test tính credit limit
             {
                 Caption = 'Calculate Credit Limit';
                 ApplicationArea = all;
@@ -49,7 +49,8 @@ pageextension 50101 "Customer Page Card Ext" extends "Customer Card"
     begin
         CreditLimitActual := c."Credit Limit (LCY)";
         CreditLimitCalculated := c.CalculateCreditLimit(Rec);
-        if CreditLimitActual = CreditLimitCalculated then begin
+        if CreditLimitActual = Round(c.CalculateCreditLimit(Rec) / 10000) * 10000 then begin
+            //line 52 làm tròn phòng trường hợp đã được update credit limit vd đã được update là 2400 sau khi tính lại chưa làm tròn là 2422 => 2400 != 2422 :)))
             Message("Up-to-date credit limit");
             EXIT;
         end;

@@ -1,7 +1,7 @@
 /// <summary>
 /// Codeunit CourseInstallCode (ID 50100).
 /// </summary>
-codeunit 50100 CourseInstallCode
+codeunit 50100 CourseInstallCode// cái này đung dể auto thêm dữ liệu khi bảng Course trống 
 {
     // Set the codeunit to be an install codeunit. 
     Subtype = Install;

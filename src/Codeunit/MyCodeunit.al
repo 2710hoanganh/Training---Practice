@@ -1,7 +1,7 @@
 /// <summary>
 /// Codeunit MyCodeunit (ID 50101).
 /// </summary>
-codeunit 50101 MyCodeunit
+codeunit 50101 MyCodeunit // variable
 {
     trigger OnRun()
     begin

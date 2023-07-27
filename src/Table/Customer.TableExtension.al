@@ -42,10 +42,9 @@ tableextension 50100 "Customer Table Ext" extends Customer
         "to": Date;
         "Cus ": Record "Cust. Ledger Entry";
     begin
-        Cost := 0;
-        from := 20250117D;
-        "to" := 20250120D;
-        "Cus ".SetRange("Posting Date", from, "to");//set range 
+        from := 20250117D;// from 17/1/2025 
+        "to" := 20250120D;//20/1/2025
+        "Cus ".SetRange("Posting Date", from, "to");//set range 3 ngày
         "Cus ".SetRange("Customer No.", Customer."No.");
         if "Cus ".FindSet() then begin
             repeat

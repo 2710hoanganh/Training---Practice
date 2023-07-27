@@ -1,7 +1,7 @@
 /// <summary>
 /// Codeunit Customer Code Unit (ID 50105).
 /// </summary>
-codeunit 50105 "Customer Code Unit"
+codeunit 50105 "Customer Code Unit" // test
 {
     trigger OnRun()
     begin
@@ -16,9 +16,6 @@ codeunit 50105 "Customer Code Unit"
     begin
 
     end;
-
-
-
     /// <summary>
     /// CalculateCreditLimit.
     /// </summary>
@@ -32,10 +29,10 @@ codeunit 50105 "Customer Code Unit"
         "Cus ": Record "Cust. Ledger Entry";
     begin
         Cost := 0;
-        from := 20250117D;
-        "to" := 20250120D;
+        from := 20250117D;// from 17/1/2025 
+        "to" := 20250120D;//20/1/2025
         "Cus ".SetRange("Customer No.", Customer."No.");
-        "Cus ".SetRange("Posting Date", from, "to");//set range 
+        "Cus ".SetRange("Posting Date", from, "to");//set range 3 ngày
         if "Cus ".FindSet() then begin
             repeat
                 Cost := Cost + "Cus "."Sales (LCY)";
