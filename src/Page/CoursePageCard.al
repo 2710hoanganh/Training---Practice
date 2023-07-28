@@ -86,7 +86,7 @@ page 50100 "Course Page Card"
                     r: Report "Course Report";
                     c: Record "Course Infomation Table";
                 begin
-                    c.SetRange(Code, rec.Code);
+                    c.SetRange(Type, rec.Type);
                     c.FindSet();
                     REPORT.RunModal(Report::"Course Report", true, true, c);
                 end;

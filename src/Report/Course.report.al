@@ -5,8 +5,10 @@ report 50100 "Course Report"
 {
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
-    RDLCLayout = 'report.rdl';
+    DefaultLayout = Word;
+    RDLCLayout = 'reportreal.rdl';
     WordLayout = 'report.docx';
+
     dataset
     {
         dataitem(Course; "Course Infomation Table")
@@ -14,7 +16,6 @@ report 50100 "Course Report"
             RequestFilterFields = Type;
             column(Code; Code)
             {
-
             }
             column(Name; Name)
             {
@@ -31,37 +32,4 @@ report 50100 "Course Report"
             column(SystemCreatedAt; SystemCreatedAt) { }
         }
     }
-
-    requestpage
-    {
-        // layout
-        // {
-        //     area(Content)
-        //     {
-        //         group(GroupName)
-        //         {
-        //             field(Name; SourceExpression)
-        //             {
-        //                 ApplicationArea = All;
-
-        //             }
-        //         }
-        //     }
-        // }
-
-        actions
-        {
-            area(processing)
-            {
-                action(ActionName)
-                {
-                    ApplicationArea = All;
-
-                }
-            }
-        }
-    }
-
-    var
-        myInt: Integer;
 }
