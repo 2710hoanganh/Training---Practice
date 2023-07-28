@@ -8,7 +8,7 @@ page 50101 "Course Page List"
     UsageCategory = Documents;
     SourceTable = "Course Infomation Table";
     CardPageId = "Course Page Card";
-
+    Caption = 'Course Page List';
     layout
     {
         area(Content)

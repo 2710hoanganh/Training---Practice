@@ -56,7 +56,7 @@ codeunit 50103 "Customer Update"
         // end;
     end;
 
-    local procedure Auto()
+    local procedure Auto() // auto increment =)))
     var
         "CustomerOverview": Record "Customer Overview Table ";
     begin
@@ -69,12 +69,12 @@ codeunit 50103 "Customer Update"
 
     end;
 
-    local procedure Delete()
-    var
-        "CustomerOverview": Record "Customer Overview Table ";
-    begin
-        CustomerOverview.DeleteAll();
-    end;
+    // local procedure Delete()
+    // var
+    //     "CustomerOverview": Record "Customer Overview Table ";
+    // begin
+    //     CustomerOverview.DeleteAll();
+    // end;
 
     var
         myInt: Integer;

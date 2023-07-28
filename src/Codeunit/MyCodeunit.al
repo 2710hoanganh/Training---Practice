@@ -5,6 +5,16 @@ codeunit 50101 MyCodeunit // variable
 {
     trigger OnRun()
     begin
+        LoopNo := 10;
+        YesOrNo := true;
+        Amount := 5.5;
+        "When Was It" := Today;
+        "What Time" := TIME;
+        Description := 'Description';
+        "Code Number" := '1231231';
+        Ch := 'd';
+
+
         MESSAGE('The value of %1 is %2', 'YesOrNo', YesOrNo);
         MESSAGE('The value of %1 is %2', 'Amount', Amount);
         MESSAGE('The value of %1 is %2', 'When Was It', "When Was It");

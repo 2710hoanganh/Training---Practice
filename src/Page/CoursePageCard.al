@@ -10,6 +10,7 @@ page 50100 "Course Page Card"
     ApplicationArea = All;
     UsageCategory = Documents;
     SourceTable = "Course Infomation Table";
+    Caption = 'Course Page Card';
 
     layout
     {
