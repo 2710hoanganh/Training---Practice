@@ -47,9 +47,8 @@ tableextension 50100 "Customer Table Ext" extends Customer
         "Cus ".SetRange("Posting Date", from, "to");//set range 3 ngày
         "Cus ".SetRange("Customer No.", Customer."No.");
         if "Cus ".FindSet() then begin
-            repeat
-                Cost += "Cus "."Sales (LCY)";
-            until "Cus ".Next() = 0;
+            "Cus ".CalcSums("Sales (LCY)");
+            Cost := "Cus "."Sales (LCY)"
         end;
         exit(Cost)
     end;
